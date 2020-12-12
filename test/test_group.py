@@ -193,4 +193,7 @@ if __name__ == '__main__':
 
 #                      Test Case Coverage: Unit Test                          #
 #          Input             Expected Output            Actual Output         #
-
+#       Instantiate             Exception                   Exception         #
+#       Instantiate             Exception                   Exception         #
+#       Instantiate             Exception                   Exception         #
+#       Instantiate             Exception                   Exception         #

@@ -21,5 +21,24 @@
 """ Class Group """
 
 
+class Group(object):
 
+    def __init__(self, entries, priority, group_num):
+        """
+        Default constructor.
+        :param entries: Required list.
+        :param priority: Required String.
+        :param group_num: Required integer.
+        """
+        # Input validation.
+        if isinstance(entries, list) \
+                and isinstance(priority, str) \
+                and isinstance(group_num, int) \
+                and len(entries) <= 4:
+            self._group_num = group_num
 
+            # Member variable declaration and initialization.
+            self._members = entries
+            self._priority = priority
+        else:
+            raise ValueError("Invalid parameter.")
