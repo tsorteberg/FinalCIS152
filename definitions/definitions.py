@@ -254,6 +254,51 @@ class Schedule(object):
         # Close open object.
         csv_file.close()
 
+    def selection_sort(self):
+        """
+        Function that performs a selection sort algorithm on the queue based
+        on group priority.
+        :return: No return.
+        """
+
+        def swap(min_value, index_value):
+            """
+            Helper function that exchanges queue positions from minimum value
+            and index value.
+            :param min_value: Required integer.
+            :param index_value: Required integer.
+            :return: No return.
+            """
+            temp = self._queue[min_value]
+            self._queue[min_value] = self._queue[index_value]
+            self._queue[index_value] = temp
+
+        # Local variable declaration and initialization.
+        index = 0
+        count = 0
+        # While the index is less than the total size of the queue.
+        while index < self.size() - 1:
+            # Set the minimum index value to index.
+            min_index = index
+            # Set the probe index to index value plus one.
+            probe = index + 1
+            # While the probe index is less than the total size of the queue.
+            while probe < self.size():
+                # If probe index priority is less than minimum index priority.
+                if self._queue[probe].get_priority() < self._queue[min_index].get_priority():
+                    # Set minimum index to probe index.
+                    min_index = probe
+                # Increment counters.
+                probe += 1
+                count += 1
+            # If minimum index value does not equal initial index value.
+            if min_index != index:
+                # Function call to swap group positions in queue if value is found.
+                swap(min_index, index)
+            # Increment counters.
+            index += 1
+            count += 1
+
     @ staticmethod
     def priority(entries):
         """
