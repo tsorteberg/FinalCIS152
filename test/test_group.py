@@ -201,4 +201,7 @@ if __name__ == '__main__':
 #       update()                Exception                   Exception         #
 #       update()                Success                     Success           #
 #       update()                Exception                   Exception         #
+#       size()                     4                           4              #
 #       get_priority()            "A"                         "A"             #
+#       Instantiate             Success                     Success           #
+#       get_members()           Success                     Success           #

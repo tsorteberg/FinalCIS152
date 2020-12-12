@@ -71,3 +71,11 @@ class Group(object):
         """
         # Return statement.
         return self._priority
+
+    def get_members(self):
+        """
+        Function that returns group member information.
+        :return: Returns a list.
+        """
+        # Return statement.
+        return self._members
