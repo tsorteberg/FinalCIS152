@@ -429,3 +429,5 @@ if __name__ == '__main__':
 #       search("ABC")           Exception                   Exception         #
 #       search(2)               False                       False             #
 #       search(1)               True                        True              #
+#       remove()                Success                     Success           #
+#       display()               Success                     Success           #

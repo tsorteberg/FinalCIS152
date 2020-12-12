@@ -141,6 +141,14 @@ class Schedule(object):
         # Write entry to backup.csv file in case of recovery.
         self.backup_csv()
 
+    def remove(self):
+        """
+        Function that removes a group from the queue based on group number.
+        :return: Returns a Group object.
+        """
+        # Return statement.
+        return self._queue.pop(0)
+
     def size(self):
         """
         Function that returns the size of the queue.
@@ -178,6 +186,37 @@ class Schedule(object):
 
         # Return statement.
         return return_statement
+
+    def display_group(self, value):
+        """
+        Function that displays group information based on group number.
+        :param value: Required integer.
+        :return: Returns a string.
+        """
+        # Local variable declaration and initialization.
+        return_statement = "Group not found."
+        member_statement = ""
+        # Input Validation.
+        if isinstance(value, int):
+            # For loop to search for group value.
+            for group in self._queue:
+                # If group found, return group information.
+                if group.get_group_num() == value:
+                    members = group.get_members()
+                    for member in members:
+                        member_statement = member_statement \
+                                           + "\nTicket#: " + member[0] \
+                                           + "\nAge: " + member[1] \
+                                           + "\nHeight: " + member[2] \
+                                           + "\nemail: " + member[3] + "\n"
+
+                    return_statement = "Group#: " + str(group.get_group_num()) + \
+                                       ", Priority: " + group.get_priority() + \
+                                       ", \nMembers: \n" + member_statement
+            # Return statement.
+            return return_statement
+        else:
+            raise ValueError("Parameter value must be an integer.")
 
     def backup_csv(self):
         """
