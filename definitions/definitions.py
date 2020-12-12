@@ -22,6 +22,7 @@ from modules.validate import check_ticket
 import re
 from modules.validate import update_csv
 import csv
+import ast
 
 """ Class Schedule"""
 
@@ -217,6 +218,27 @@ class Schedule(object):
             return return_statement
         else:
             raise ValueError("Parameter value must be an integer.")
+
+    def import_csv(self):
+        """
+        Function that imports data from backup .csv and rebuilds
+        priority queue.
+        :return: No return.
+        """
+        # Local variable declaration and initialization.
+        # Try except clause to check if file is available.
+        try:
+            with open('../backup/backup.csv', mode='r', newline="") as csv_file:
+                csv_reader = csv.reader(csv_file, delimiter=',')
+                for line in csv_reader:
+                    # Convert string representation of list to type list.
+                    temp_string = line[2]
+                    temp_list = ast.literal_eval(temp_string)
+                    self._queue.append(Group(temp_list, line[1], int(line[0])))
+                    self._group_number += 1
+        except FileNotFoundError:
+            # Raise exception.
+            raise FileNotFoundError("Backup.csv file cannot be found.")
 
     def backup_csv(self):
         """
