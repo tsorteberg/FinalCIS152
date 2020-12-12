@@ -50,3 +50,15 @@ class Group(object):
         """
         # Return statement.
         return len(self._members)
+
+    def update(self, visitor):
+        """
+        Function that appends members to groups.
+        :param visitor: Required list.
+        :return: No return.
+        """
+        # Input validation.
+        if isinstance(visitor, list) and self.size() != constants.MAX_GROUP:
+            self._members.append(visitor)
+        else:
+            raise ValueError("Parameter must be of type list.")
