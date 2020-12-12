@@ -241,3 +241,16 @@ if __name__ == '__main__':
 #      update_csv                Exception                   Exception         #
 #      Parameter                 Exception                   Exception         #
 #      Parameter                 Exception                   Exception         #
+#      Ticket#: blank            False                       False             #
+#      Ticket#: "GP0001"         False                       False             #
+#      Ticket#: "GA00001"        False                       False             #
+#      Age: blank                False                       False             #
+#      Age: "2"                  False                       False             #
+#      Age: "ABC"                False                       False             #
+#      Height: "36"              False                       False             #
+#      Height: "ABC"             False                       False             #
+#      Email: blank              False                       False             #
+#      Email: "noyb.noyb.com     False                       False             #
+#      Accompany condition       False                       False             #
+#      Duplicate condition       False                       False             #
+#      All: Valid Entry          True                        True              #
