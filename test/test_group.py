@@ -201,3 +201,4 @@ if __name__ == '__main__':
 #       update()                Exception                   Exception         #
 #       update()                Success                     Success           #
 #       update()                Exception                   Exception         #
+#       get_priority()            "A"                         "A"             #

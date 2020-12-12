@@ -63,3 +63,11 @@ class Group(object):
             self._members.append(visitor)
         else:
             raise ValueError("Parameter must be of type list.")
+
+    def get_priority(self):
+        """
+        Function that returns group priority.
+        :return: Returns a string.
+        """
+        # Return statement.
+        return self._priority
