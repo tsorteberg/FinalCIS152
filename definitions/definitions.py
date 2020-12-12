@@ -1,0 +1,25 @@
+"""
+/**************************************************************
+* Name        : definitions.py
+* Author      : Tom Sorteberg
+* Created     : 12/08/2020
+* Course      : CIS 152 Data Structures
+* Version     : 1.0
+* OS          : Windows 10 Professional 1909
+* Copyright   : This is my own original work based on
+*               specifications issued by our instructor
+* Description : This class file defines both the Schedule
+                and Group wrapper data types for the
+                Scheduling Application.
+* Academic Honesty: I attest that this is my original work.
+* I have not used unauthorized source code, either modified or
+* unmodified. I have not given other fellow student(s) access to
+* my program.
+***************************************************************/
+"""
+
+""" Class Group """
+
+
+
+
