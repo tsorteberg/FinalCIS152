@@ -362,7 +362,7 @@ class RegistrationPage(tk.Frame):
             # Update label for confirmation.
             label_status.config(text="Processed successfully.", fg="black")
             self.update()
-            time.sleep(5)
+            time.sleep(2)
 
             # Function call for additional registration.
             master.switch_frame(RegistrationPage)
@@ -437,7 +437,7 @@ class AdminPage(tk.Frame):
             # Update label for confirmation.
             label_status.config(text="Processed successfully.", fg="black")
             self.update()
-            time.sleep(5)
+            time.sleep(2)
 
             # Function call for additional registration.
             master.switch_frame(AdminPage)

@@ -348,13 +348,25 @@ class Schedule(object):
             # For loop and selection logic to determine group priority.
             for entry in entries:
                 if entry[0] != "" and entry[0][0:2] == "GP":
-                    priority = "A"
+                    if priority is None:
+                        priority = "A"
+                    elif priority >= "A":
+                        priority = "A"
                 elif entry[0] != "" and entry[0][0:2] == "GS":
-                    priority = "B"
+                    if priority is None:
+                        priority = "B"
+                    elif priority >= "B":
+                        priority = "B"
                 elif entry[0] != "" and entry[0][0:2] == "PR":
-                    priority = "C"
+                    if priority is None:
+                        priority = "C"
+                    elif priority >= "C":
+                        priority = "C"
                 elif entry[0] != "" and entry[0][0:2] == "GR":
-                    priority = "D"
+                    if priority is None:
+                        priority = "D"
+                    elif priority >= "D":
+                        priority = "D"
         else:
             # Raise exception.
             raise ValueError("Parameter must be type list.")
