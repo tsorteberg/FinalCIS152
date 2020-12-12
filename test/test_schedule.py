@@ -405,4 +405,20 @@ if __name__ == '__main__':
 
 #                      Test Case Coverage: Unit Test                          #
 #          Input             Expected Output            Actual Output         #
-
+#   insert() ticket: blank      Exception                   Exception         #
+#   insert() ticket: "GP0001"   Exception                   Exception         #
+#   insert() ticket: "GA00001"  Exception                   Exception         #
+#   insert() ticket: "GP00004"  Exception                   Exception         #
+#   insert() age: blank         Exception                   Exception         #
+#   insert() age: "2"           Exception                   Exception         #
+#   insert() age: "ABC"         Exception                   Exception         #
+#   insert() height: blank      Exception                   Exception         #
+#   insert() height: "2"        Exception                   Exception         #
+#   insert() height: "ABC"      Exception                   Exception         #
+#   insert() email: blank       Exception                   Exception         #
+#   insert() email: invalid     Exception                   Exception         #
+#   insert() ticket: duplicate  Exception                   Exception         #
+#   insert() age: invalid       Exception                   Exception         #
+#        is_empty()             True                        True              #
+#       priority()              Exception                   Exception         #
+#       priority()              Success                     Success           #
