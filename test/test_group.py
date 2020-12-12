@@ -205,3 +205,4 @@ if __name__ == '__main__':
 #       get_priority()            "A"                         "A"             #
 #       Instantiate             Success                     Success           #
 #       get_members()           Success                     Success           #
+#       get_group_num()         Success                     Success           #

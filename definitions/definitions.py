@@ -79,3 +79,11 @@ class Group(object):
         """
         # Return statement.
         return self._members
+
+    def get_group_num(self):
+        """
+        Function that returns the group number.
+        :return: Returns an int.
+        """
+        # Return statement.
+        return self._group_num
