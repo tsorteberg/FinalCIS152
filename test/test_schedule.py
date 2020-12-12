@@ -426,4 +426,6 @@ if __name__ == '__main__':
 #       backup_csv()            Success                     Success           #
 #   size() 2 Same Priority         1                           1              #
 #  size() 2 Different Priority     2                           2              #
-
+#       search("ABC")           Exception                   Exception         #
+#       search(2)               False                       False             #
+#       search(1)               True                        True              #

@@ -157,6 +157,28 @@ class Schedule(object):
         # Return statement.
         return len(self._queue) == 0
 
+    def search(self, value):
+        """
+        Function that performs a search based on group number.
+        Returns true if found.
+        :param value: Required integer.
+        :return: Returns a boolean.
+        """
+        # Local variable declaration and initialization.
+        return_statement = False
+        # Input Validation.
+        if isinstance(value, int):
+            # For loop to iterate through queue.
+            # If value is found, return True.
+            for group in self._queue:
+                if group.get_group_num() == value:
+                    return_statement = True
+        else:
+            raise ValueError("Parameter value must be an integer.")
+
+        # Return statement.
+        return return_statement
+
     def backup_csv(self):
         """
         Function that exports data to a .csv for backup.
