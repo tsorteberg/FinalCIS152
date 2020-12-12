@@ -141,6 +141,14 @@ class Schedule(object):
         # Write entry to backup.csv file in case of recovery.
         self.backup_csv()
 
+    def size(self):
+        """
+        Function that returns the size of the queue.
+        :return: Returns an integer.
+        """
+        # Return statement.
+        return len(self._queue)
+
     def is_empty(self):
         """
         Function that returns True if the queue is empty.

@@ -422,3 +422,8 @@ if __name__ == '__main__':
 #        is_empty()             True                        True              #
 #       priority()              Exception                   Exception         #
 #       priority()              Success                     Success           #
+#   insert() all: Valid         Success                     Success           #
+#       backup_csv()            Success                     Success           #
+#   size() 2 Same Priority         1                           1              #
+#  size() 2 Different Priority     2                           2              #
+
