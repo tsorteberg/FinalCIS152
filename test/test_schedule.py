@@ -348,7 +348,7 @@ class MyTestCase(unittest.TestCase):
                    "Ticket#: GR00003\n" \
                    "Age: 42\n" \
                    "Height: 72\n" \
-                   "email: noyb@noyb.com\n" \
+                   "email: noyb@noyb.com\n"
         # ACT
         schedule.insert([['GR00001', '42', '72', 'noyb@noyb.com']])
         schedule.insert([['GR00002', '42', '72', 'noyb@noyb.com']])
