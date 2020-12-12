@@ -23,6 +23,8 @@ import re
 from modules.validate import update_csv
 import csv
 import ast
+import os
+import shutil
 
 """ Class Schedule"""
 
@@ -298,6 +300,39 @@ class Schedule(object):
             # Increment counters.
             index += 1
             count += 1
+
+    def export_csv(self):
+        """
+        Function that exports data to a .csv for backup.
+        :return: No return.
+        """
+        # Function call for selection sort.
+        self.selection_sort()
+
+        # If previous export exists, backup to archive.
+        if os.path.exists("../export/export.csv"):
+            shutil.copyfile("../export/export.csv", "../archive/export.csv")
+        # Overwrite export.csv if it exists.
+        with open('../export/export.csv', mode='w', newline="") as csv_file:
+            csv_writer = csv.writer(csv_file, delimiter=',')
+
+            for group in self._queue:
+                temp_list = group.get_members()
+                csv_writer.writerow(["Group#", "Priority"])
+                csv_writer.writerow([group.get_group_num(), group.get_priority(), "Ticket#", "Age", "Height", "Email"])
+                index = 0
+                for _ in temp_list:
+                    csv_writer.writerow(["", "", temp_list[index][0], temp_list[index][1], temp_list[index][2], temp_list[index][3]])
+                    index += 1
+
+        # Close open object.
+        csv_file.close()
+
+        # Copy backup file to archive.
+        shutil.copyfile("../backup/backup.csv", "../archive/backup.csv")
+
+        # Delete backup file.
+        os.remove("../backup/backup.csv")
 
     @ staticmethod
     def priority(entries):
