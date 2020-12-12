@@ -42,3 +42,11 @@ class Group(object):
             self._priority = priority
         else:
             raise ValueError("Invalid parameter.")
+
+    def size(self):
+        """
+        Function that returns the size of group.
+        :return: Returns an integer.
+        """
+        # Return statement.
+        return len(self._members)
